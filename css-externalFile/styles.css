@@ -1,5 +1,10 @@
 body {
-  background-color: powderblue;
+  background: powderblue;
+/*  border-color: gold;
+  border-width: 2px;
+  border-style: solid;*/
+  border: gold 2px solid;
+  margin: 0;
 }
 h1 {
   color: blue;
