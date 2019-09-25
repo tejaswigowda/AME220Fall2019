@@ -14,5 +14,17 @@
 
   <p>Hello World.</p>
   <a href="https://asu.edu" target="_blank">This is a University</a>
+
+  <button onclick='foo()'> Turn Red </button>
+  <button onclick='fooW()'> Remove red </button>
 </body>
+<script>
+  var foo = function(){
+    document.body.style.background = "red";
+  }
+  var fooW = function(){
+    document.body.style.background = "";
+  }
+
+</script>
 </html>
