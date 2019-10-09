@@ -13,8 +13,8 @@ var currentSlide = 1;
 
 function goToSlide(n)
 {
-  $("img").hide();
-  $("img:nth-of-type(" + n + ")").show();
+  $("img").fadeOut();
+  $("img:nth-of-type(" + n + ")").stop().fadeIn();
   currentSlide = n;
 }
 
@@ -56,6 +56,7 @@ body{
 img{
   display: block;
   position:absolute;
+  width: 100%;
 }
 
 </style>
