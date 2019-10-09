@@ -7,6 +7,38 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
+
+<script>
+var currentSlide = 1;
+
+function goToSlide(n)
+{
+  $("img").hide();
+  $("img:nth-of-type(" + n + ")").show();
+  currentSlide = n;
+}
+
+function goPrev()
+{
+    var nextSlide = currentSlide - 1
+    if(currentSlide == 0){
+      nextSlide = 4;
+    }
+    goToSlide(nextSlide);
+}
+
+
+function goNext()
+{
+  var nextSlide = currentSlide + 1
+  if(currentSlide == 5){
+    nextSlide = 1;
+  }
+  goToSlide(nextSlide);
+}
+
+</script>
+
 <style>
 body{
   margin:0;
@@ -29,11 +61,11 @@ img{
 </style>
 </head>
 
-<body>
+<body onload='goToSlide(1)'>
   <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Aegotheles_chrisoptus_-_Catlereigh_Nature_Reserve.jpg/300px-Aegotheles_chrisoptus_-_Catlereigh_Nature_Reserve.jpg'>
   <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Turnix_varius_-_Castlereigh_nature_reserve.jpg/450px-Turnix_varius_-_Castlereigh_nature_reserve.jpg'>
   <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Acanthorhynchus_tenuirostris_-_Mogo_Campground.jpg/450px-Acanthorhynchus_tenuirostris_-_Mogo_Campground.jpg'>
   <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg/450px-Eopsaltria_australis_-_Mogo_Campground.jpg'>
-  <button id='prev'> Prev </button>
-  <button id='next'> Next </button>
+  <button id='prev' onclick='goPrev()'> Prev </button>
+  <button id='next' onclick='goNext()'> Next </button>
 </html>
