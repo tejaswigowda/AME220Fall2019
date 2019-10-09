@@ -21,7 +21,7 @@ function goToSlide(n)
 function goPrev()
 {
     var nextSlide = currentSlide - 1
-    if(currentSlide == 0){
+    if(nextSlide == 0){
       nextSlide = 4;
     }
     goToSlide(nextSlide);
@@ -31,7 +31,7 @@ function goPrev()
 function goNext()
 {
   var nextSlide = currentSlide + 1
-  if(currentSlide == 5){
+  if(nextSlide == 5){
     nextSlide = 1;
   }
   goToSlide(nextSlide);
