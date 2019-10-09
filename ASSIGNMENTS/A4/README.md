@@ -13,3 +13,8 @@ That is:
 ## Mockup
 
 <img src='mockup.png'>
+
+
+## Hint
+
+https://api.jquery.com/addClass/
