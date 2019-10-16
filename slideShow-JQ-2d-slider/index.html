@@ -13,8 +13,10 @@ var currentSlide = 1;
 
 function goToSlide(n)
 {
-  $(".img").fadeOut();
-  $(".img:nth-of-type(" + n + ")").stop().fadeIn();
+//  $(".img").fadeOut();
+//  $(".img:nth-of-type(" + n + ")").stop().fadeIn();
+$("#firstSlide").animate({"margin-left": (n-1)*-100 + "vw"}, 1000);
+
   $(".num").removeClass("selected");
   $(".num:nth-of-type(" + n + ")").addClass("selected");
   currentSlide = n;
@@ -44,6 +46,8 @@ function goNext()
 <style>
 body{
   margin:0;
+  width: 400vw;
+  overflow: hidden;
 }
 #prev{
   position:fixed;
@@ -57,10 +61,10 @@ body{
 }
 
 .img{
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  display: inline-block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size:contain;
@@ -92,7 +96,7 @@ button.num{
 </head>
 
 <body onload='goToSlide(1)'>
-  <div class='img' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Aegotheles_chrisoptus_-_Catlereigh_Nature_Reserve.jpg/300px-Aegotheles_chrisoptus_-_Catlereigh_Nature_Reserve.jpg)'></div>
+  <div id='firstSlide' class='img' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Aegotheles_chrisoptus_-_Catlereigh_Nature_Reserve.jpg/300px-Aegotheles_chrisoptus_-_Catlereigh_Nature_Reserve.jpg)'></div>
   <div class='img' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Turnix_varius_-_Castlereigh_nature_reserve.jpg/450px-Turnix_varius_-_Castlereigh_nature_reserve.jpg)'></div>
   <div class='img' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Acanthorhynchus_tenuirostris_-_Mogo_Campground.jpg/450px-Acanthorhynchus_tenuirostris_-_Mogo_Campground.jpg)'></div>
   <div class='img' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg/450px-Eopsaltria_australis_-_Mogo_Campground.jpg)'></div>
