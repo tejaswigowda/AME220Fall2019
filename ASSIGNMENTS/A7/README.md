@@ -12,6 +12,10 @@ In class we made an iPhone/Android app using Capacitor
 
 Package your resume (done for previous assignment) as an iPhone/Android native app.
 
+## Grading
+1. 10 points: iPhone app (demo on device or emulator)
+2. 10 points: Android app (demo on device or emulator)
+
 ## References
 
 1. https://capacitor.ionicframework.com/docs/getting-started/
