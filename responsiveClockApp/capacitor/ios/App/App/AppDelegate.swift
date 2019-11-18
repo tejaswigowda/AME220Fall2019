@@ -1,6 +1,11 @@
 import UIKit
 import Capacitor
+import {
+    Plugins,
+    StatusBarStyle,
+} from '@capacitor/core';
 
+const { StatusBar } = Plugins;
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -37,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
     // Called when the app was launched with a url. Feel free to add additional processing here,
     // but if you want the App API to support tracking app url opens, make sure to keep this call
+
+     StatusBar.show();
     return CAPBridge.handleOpenUrl(url, options)
   }
   
@@ -44,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the app was launched with an activity, including Universal Links.
     // Feel free to add additional processing here, but if you want the App API to support
     // tracking app url opens, make sure to keep this call
+    
+
     return CAPBridge.handleContinueActivity(userActivity, restorationHandler)
   }
 
