@@ -9,3 +9,4 @@ URL definition and specs: https://en.wikipedia.org/wiki/Url
 Github basics: https://tejaswigowda.github.io/github-basics/
 
 
+Make apps using capacitor: https://gist.github.com/tejaswigowda/8449ed1365a255bca26eb6c519755db2
