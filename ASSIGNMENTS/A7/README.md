@@ -1,6 +1,6 @@
 # Assignment 7
 
-## Due Nov 20<sup>th</sup> before midnight
+## Due Nov 25<sup>th</sup> before midnight
 
 ## Background
 
