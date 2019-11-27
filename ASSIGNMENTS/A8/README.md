@@ -1,6 +1,6 @@
 # Assignment 8
 
-## Due Nov 31<sup>st</sup> before midnight
+## Due Dec 2<sup>nd</sup> before midnight
 
 ## Background
 
